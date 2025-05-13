@@ -18,6 +18,7 @@ if(arr[middle] === elem){
 } else{
     return -1;
 }
+}
 
 binarySearch([1,2,3,4,5,6,7,8,9], 5); // 4
 // Time complexity: O(log n)
