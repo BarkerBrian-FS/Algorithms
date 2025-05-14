@@ -7,10 +7,11 @@ function linearSearch(arr, val){
         if(arr[i] === val){
             return i;
         }
-        return -1;
     }
+    return -1;
 }
+   
 
-linearSearch([1,2,3,4,5], 3) // 2
+console.log(linearSearch([1,2,3,4,5], 3)) // 2
 // Time complexity: O(n)
 // Space complexity: O(1)
