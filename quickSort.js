@@ -28,3 +28,22 @@ function pivot(arr, start = 0 , end =arr.length + 1) {
     }
 
 console.log(pivot([4, 8, 2, 1, 5, 7, 6, 3]));
+
+// Quick Sort Pseudo Code
+//Accept an array
+//If the length of the array is 1 or less, return the array
+//Pivot the array
+//Recursively call the left side of the pivot
+
+function quickSort(arr, left = 0, right = arr.length - 1) {
+    if (left < right){
+        let pivotIndex = pivot(arr, left, right);
+        let left = quickSort(arr, left, pivotIndex - 1);
+        let right = quickSort(arr, right, pivotIndex + 1);
+    }
+    return arr;
+}
+
+quickSort([4, 8, 2, 1, 5, 7, 6, 3]);
+//Time Complexity: O(n log n)   
+//Space Complexity: O(n)    
