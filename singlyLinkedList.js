@@ -84,24 +84,17 @@ class SinglyLinkedList{
         if(!this.head){
             this.head = newNode;
             this.tail= this.head;
-        }
+        } else{
             newNode.next = this.head;
             this.head = newNode;
-            this.length++;
-            return this; 
         }
+        this.length++;
+        return this; 
         
     }
+}
 
   
-
-
-        
-let list = new SinglyLinkedList();
-console.log(list.push(1));
-console.log(list.push(2));
-console.log(list.push(3));
-console.log(list.pop);
 
 
 
