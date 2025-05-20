@@ -106,11 +106,38 @@ class SinglyLinkedList{
         }
         return current
         };
+        //set pseudo code
+         //Function should accept an index and a value
+         // Use get function to find the specific node
+         //If node not found return false
+         //If node is found set the value of that node to be value passed to the funciton and return true
+    set(index, val){
+        let foundNode = this.get(index);
+        if(foundNode){
+            foundNode.val = val;
+            return true;
+        }
+        return false;
     }
-    //set pseudo code
+    //insert pseudo code
+    //Function should accept an index and a value
+    //If the index is less than zero or greater than the length return false
+    //If the index is the same as the length, push a new node to the end of the list
+    //If the index is 0, unshift a new node to the start of the list
+    //Otherwise, using the get method, access the node at the index -1
+    //Set the next property on that node to be the new node 
+    //Set the next property on the new node to be the previous next
+    //Increment the length by 1
+    //Return true
+    insert(index, val){
+        if(index < 0 || index > this.length) return false;
+        if(index === this.length) return this.push(val)
+        if(index === 0) return this.unshift(val);
+    }
+    }
+    
 
-  
-
+let list = new SinglyLinkedList();
 
 
 
