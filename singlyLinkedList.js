@@ -71,14 +71,32 @@ class SinglyLinkedList{
         }
         return currentHead;
     }
-}
+    //unshift pseudo code
+    //Function should accept a value
+    //Create new node with value passed to function
+    //If there is no head property on the list set head and tail to newly created node
+    //Otherwise set set newly created node's next property to be the current head property on the list
+    //Set the head property on the list to be the newly created node
+    //Increment the length by 1
+    //Return the linked list
+    unshift(val){
+        let newNode = new Node(val);
+        if(!this.head){
+            this.head = newNode;
+            this.tail= this.head;
+        }
+            newNode.next = this.head;
+            this.head = newNode;
+            this.length++;
+            return this; 
+        }
+        
+    }
+
   
 
 
         
-
-    
-
 let list = new SinglyLinkedList();
 console.log(list.push(1));
 console.log(list.push(2));
