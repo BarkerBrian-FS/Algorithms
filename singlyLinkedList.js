@@ -172,7 +172,23 @@ class SinglyLinkedList{
         //Set prev to be the value of the node variable
         //Set the node variable to be the value of the next variable
     //Set the head to be the prev variable
-}
+    //Return the list
+    reverse(){
+        let node = this.head;
+        this.head = this.tail;
+
+    }
+    print(){
+        let arr = [];
+        let current = this.head;
+        while(current){
+            arr.push(current.val);
+            current = current.next;
+        }
+        console.log(arr);
+        }
+    }
+
     
 
 let list = new SinglyLinkedList();
