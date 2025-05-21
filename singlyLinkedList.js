@@ -142,7 +142,23 @@ class SinglyLinkedList{
         return true;
 
     }
+    //remove pseudo code
+    //Function should accept an index
+    //If the index is less than zero or greater than or equal to the length return undefined
+    //If the index is the same as the length -1, pop
+    //If the index is 0, shift
+    //Otherwise, using the get method, access the node at index -1
+    //Set the next property on that node to be the next of the next node
+    //Decrement the length by 1 
+    //Return the value of the node removed
+    remove(index){
+        if(index < 0 || index >=  this.length)return undefined;
+        if(index === this.length -1)return this.pop();
+        if(index === 0)return this.shift();
+        let prevNode = this.get(index -1);
+        lenght --;
     }
+}
     
 
 let list = new SinglyLinkedList();
