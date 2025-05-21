@@ -161,6 +161,17 @@ class SinglyLinkedList{
         this.length --;
         return removed;
     }
+    //reverse pseudo code
+    //Swap the head and tail
+    //Create a variable called next
+    //Create a variable called prev
+    //Create a variable called node and set it to the head property
+    //Loop through the list
+        //Set next to be the next property on whatever node is
+        //Set the next property on the node to be the prev variable
+        //Set prev to be the value of the node variable
+        //Set the node variable to be the value of the next variable
+    //Set the head to be the prev variable
 }
     
 
