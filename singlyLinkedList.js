@@ -156,7 +156,10 @@ class SinglyLinkedList{
         if(index === this.length -1)return this.pop();
         if(index === 0)return this.shift();
         let prevNode = this.get(index -1);
-        lenght --;
+        let removed = prevNode.next;
+        prevNode.next = removed.next;
+        this.length --;
+        return removed;
     }
 }
     
